@@ -20,15 +20,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  display: inline-block;
+
+  display: inline-flex;     /* <--- center icon and text in one line */
+  align-items: center;      /* <--- vertically center */
+  justify-content: center;  /* <--- horizontally center */
 }
 
-/* Remove gradient from icon */
+/* Icon should stay normal color */
 .section-title .icon {
   -webkit-text-fill-color: initial !important;
   background: none !important;
   margin-right: 8px;
-  display: inline-block;
 }
 
 /* Underline */
