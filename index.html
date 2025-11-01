@@ -67,15 +67,20 @@
 
     .match-card img {
       width: 100%;
-      height: 100px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      background: rgba(255,255,255,0.07);
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+
+    .match-card h3 {
+      font-size: 19px;
+      margin: 6px 0;
+      color: #fff;
     }
 
     .play-btn {
-      margin-top: 8px;
+      margin-top: 10px;
       padding: 8px 14px;
       background: linear-gradient(90deg, #ff0077, #00c3ff);
       border: none;
@@ -116,7 +121,8 @@ async function loadChannels() {
       <button class="play-btn">▶ Play</button>
     `;
 
-    card.onclick = () => {
+    card.querySelector(".play-btn").onclick = (e) => {
+      e.stopPropagation();
       const playerUrl = `player.html?url=${encodeURIComponent(ch.url)}&k1=${ch.keyId}&k2=${ch.key}`;
       window.location.href = playerUrl;
     };
