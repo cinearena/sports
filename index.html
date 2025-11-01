@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Live Channels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="https://cinearena.github.io/astro-jwplyr/faviconimg.jpeg" />
+  <title>Cine Arena</title>
+   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body { background: #111; color: white; font-family: Arial; padding: 15px; }
@@ -74,9 +75,79 @@
       margin: 8px 0;
       font-size: 14px;
     }
+
+     .telegram-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background: #0088cc;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.telegram-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 18px rgba(0,0,0,0.4);
+}
+
+.telegram-float img {
+  width: 60%;
+  filter: invert(0); /* keep original color */
+}
+    
   </style>
 </head>
 <body>
+
+  <!-- Header -->
+
+  <header class="bg-blue-900 text-white flex items-center justify-between px-6 py-3 fixed w-full top-0 z-50">
+
+  <!-- Mobile Menu Button -->
+  <button id="open-menu" class="text-2xl md:hidden mr-2">☰</button>
+
+  <!-- Logo (space from left already due to px-6, but adding extra) -->
+  <a href="https://cinearena.live" class="ml-2">
+    <img src="https://cricstream4u.github.io/cinearena/cineheader.png" class="h-9">
+  </a>
+
+  <!-- Desktop Menu (add extra right spacing) -->
+  <nav class="hidden md:flex space-x-6 text-lg mr-4">
+    <a href="https://cinearena.live" class="hover:text-cyan-300">Home</a>
+    <a href="https://cinearena.github.io/sports/" class="hover:text-cyan-300">Sports</a>
+    <a href="https://cinearena.github.io/music/" class="hover:text-cyan-300">Music</a>
+    <a href="https://cinearena.github.io/movies/" class="hover:text-cyan-300">Movies</a>
+    <a href="https://t.me/cine_arena" target="_blank" class="hover:text-cyan-300">Telegram</a>
+  </nav>
+
+</header>
+
+<div id="sidebar"
+  class="fixed top-0 left-0 h-full w-64 bg-blue-800 text-white transform -translate-x-full transition-transform duration-300 z-50 shadow-2xl md:hidden">
+
+  <div class="p-4 text-center text-xl font-bold border-b border-blue-600">
+    Menu
+  </div>
+
+  <nav class="flex flex-col text-lg">
+    <a href="https://cinearena.live" class="py-3 px-4 hover:bg-blue-700">🏠 Home</a>
+    <a href="https://cinearena.github.io/sports/" class="py-3 px-4 hover:bg-blue-700">⚽ Sports</a>
+    <a href="https://cinearena.github.io/music/" class="py-3 px-4 hover:bg-blue-700">🎵 Music</a>
+    <a href="https://cinearena.github.io/movies/" class="py-3 px-4 hover:bg-blue-700">🎬 Movies</a>
+    <a href="https://t.me/cine_arena" target="_blank" class="py-3 px-4 hover:bg-blue-700">📢 Telegram</a>
+  </nav>
+</div>
+
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 md:hidden"></div>
 
 <h1 class="section-title"><span class="icon">📺</span> Live Channels</h1>
 <div class="grid" id="channelGrid"></div>
@@ -107,6 +178,28 @@ async function loadChannels() {
 
 loadChannels();
 </script>
+
+
+  <script>
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const openMenu = document.getElementById("open-menu");
+
+  openMenu.addEventListener("click", () => {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+  });
+
+  overlay.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  });
+</script>
+
+  <a href="https://t.me/cine_arena" class="telegram-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+</a>
+
 
 </body>
 </html>
