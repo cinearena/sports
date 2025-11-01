@@ -10,7 +10,7 @@
     h1 { text-align: center; margin-bottom: 15px; }
 
     /* Pretty Section Heading */
-    .section-title {
+   .section-title {
   text-align: center;
   font-size: 30px;
   font-weight: 800;
@@ -20,17 +20,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-
-  display: inline-flex;     /* <--- center icon and text in one line */
-  align-items: center;      /* <--- vertically center */
-  justify-content: center;  /* <--- horizontally center */
+  display: inline-block;
 }
 
-/* Icon should stay normal color */
+/* Remove gradient from icon */
 .section-title .icon {
   -webkit-text-fill-color: initial !important;
   background: none !important;
   margin-right: 8px;
+  display: inline-block;
 }
 
 /* Underline */
