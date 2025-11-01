@@ -11,26 +11,37 @@
 
     /* Pretty Section Heading */
     .section-title {
-      text-align: center;
-      font-size: 30px;
-      font-weight: 800;
-      margin: 40px 0 5px;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #ff0077, #00eaff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
-    }
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 40px 0 5px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff0077, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
 
-    .section-title::after {
-      content: "";
-      width: 100px;
-      height: 4px;
-      background: linear-gradient(90deg, #ff0077, #00eaff);
-      display: block;
-      margin: 6px auto 0;
-      border-radius: 10px;
-    }
+/* Remove gradient from icon */
+.section-title .icon {
+  -webkit-text-fill-color: initial !important;
+  background: none !important;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* Underline */
+.section-title::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0077, #00eaff);
+  display: block;
+  margin: 6px auto 0;
+  border-radius: 10px;
+}
+
 
     .grid {
       display: grid;
@@ -67,7 +78,7 @@
 </head>
 <body>
 
-<h1 class="section-title"><P class="icon">📺</P> Live Channels</h1>
+<h1 class="section-title"><span class="icon">📺</span> Live Channels</h1>
 <div class="grid" id="channelGrid"></div>
 
 <script>
