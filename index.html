@@ -159,6 +159,9 @@
   </center>
 <div class="grid" id="channelGrid"></div>
 
+
+  <h1 class="section-title"><span class="icon">🎵</span> Music Live</h1>
+  <div id="music" class="matches" style="padding:20px;"></div>
 <script>
 async function loadChannels() {
   const response = await fetch("https://raw.githubusercontent.com/cinearena/sports/main/sports-channels.json");
@@ -184,6 +187,47 @@ async function loadChannels() {
 }
 
 loadChannels();
+</script>
+
+
+  <!--- For Music -->
+  <script>
+async function loadSection(jsonUrl, container) {
+  const response = await fetch(jsonUrl);
+  const data = await response.json();
+
+  data.matches.forEach(match => {
+    const card = document.createElement("div");
+    card.className = "match-card";
+
+    card.innerHTML = `
+      <img src="${match.src}" alt="${match.title}">
+      <h3>${match.title}</h3>
+      <p>${match.event_name || ''}</p>
+      <p class="status ${match.status}">${match.status}</p>
+      <button class="play-btn">▶ Play</button>
+    `;
+
+    card.querySelector(".play-btn").onclick = () => {
+      if (match.url) window.open(match.url, "_blank");
+      else alert("Stream Not Available 😔");
+    };
+
+    container.appendChild(card);
+  });
+}
+
+async function loadMatches() {
+  const musicUrl = "https://raw.githubusercontent.com/cinearena/Cine-Arena/main/music.json";
+
+  const sportsDiv = document.getElementById("sports");
+  const musicDiv = document.getElementById("music");
+
+  loadSection(sportsUrl, sportsDiv);
+  loadSection(musicUrl, musicDiv);
+}
+
+loadMatches();
 </script>
 
 
