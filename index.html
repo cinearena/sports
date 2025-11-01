@@ -9,6 +9,29 @@
     body { background: #111; color: white; font-family: Arial; padding: 15px; }
     h1 { text-align: center; margin-bottom: 15px; }
 
+    /* Pretty Section Heading */
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      margin: 40px 0 5px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ff0077, #00eaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #ff0077, #00eaff);
+      display: block;
+      margin: 6px auto 0;
+      border-radius: 10px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -40,7 +63,7 @@
 </head>
 <body>
 
-<h1>📺 Live Channels</h1>
+<h1 class="section-title">📺 Live Channels</h1>
 <div class="grid" id="channelGrid"></div>
 
 <script>
