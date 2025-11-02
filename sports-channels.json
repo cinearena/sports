@@ -16,9 +16,9 @@
   {
     "title": "Star1 Hindi HD",
     "image": "https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_HD1_Hindi.png",
-    "url": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/output/index.mpd",
-    "keyId": "400131994b445d8c8817202248760fda",
-    "key": "2d56cb6f07a75b9aff165d534ae2bfc4"
+    "url": "https://livetv-push.hotstar.com/dash/live/2002466-b/sshindiwv/master.mpd",
+    "keyId": "fe7718fbb3fb4ba78c07cc0f578744e6",
+    "key": "624e24b1843b459fab0a949609416f0d"
   },
   {
     "title": "Star1 Hindi",
