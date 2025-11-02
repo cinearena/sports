@@ -5,7 +5,15 @@
     "url": "https://ottb.live.cf.ww.aiv-cdn.net/sin-nitro/live/dash/enc/feh5lmnfkl/out/v1/2f30a0bcdbc64a09b2e101d0b71ed290/cenc.mpd",
     "keyId": "c349ec4cb941fbf48a81798dffe7e5eb",
     "key": "857bfaea3e7173bc3c63ce3749cabfcf"
-  },{
+  },
+  {
+    "title": "Shoq",
+    "image": "https://cricstream4u.github.io/cinearena/shoq.png",
+    "url": "https://live2.shoq.com.pk/live/eds/ICC_Women_World_Cup_2025/DASH/ICC_Women_World_Cup_2025.mpd",
+    "keyId": "a6dfc4f17d70d8d07639659193f03b25",
+    "key": "893eacfabe386144b81733d622a7ad17"
+  },
+  {
     
     "title": "Willow Sports",
     "image": "https://cricstream4u.github.io/cinearena/willowsports.jpg",
