@@ -16,13 +16,6 @@
     "key": "8885e1b817d24b4e317c01d46178ef5c"
   },
   {
-    "title": "TNT Sports 3",
-    "image": "https://cricstream4u.github.io/cinearena/tnt3.jpg",
-    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd",
-    "keyId": "a93c1cbfdccd23233bac13540c693e7f",
-    "key": "2f6ab2e6693eb847eff3c9da8f9d01fc"
-  },
-  {
     "title": "Sports18 Khel",
     "image": "https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_Khel.png",
     "url": "https://jiotvpllive.cdn.jio.com/bpk-tv/Sports18_Khel_BTS/output/index.mpd",
@@ -42,5 +35,12 @@
     "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/f0qvkrra8j/out/v1/f8fa17f087564f51aa4d5c700be43ec4/cenc.mpd",
     "keyId": "9f51f3dc6313ac8bc668e2d9d1c04dfa",
     "key": "74bc63e5a193454a91ca494975db33f9"
+  },
+  {
+    "title": "TNT Sports 3",
+    "image": "https://cricstream4u.github.io/cinearena/tnt3.jpg",
+    "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/lsdasbvglv/out/v1/bb548a3626cd4708afbb94a58d71dce9/cenc.mpd",
+    "keyId": "a93c1cbfdccd23233bac13540c693e7f",
+    "key": "2f6ab2e6693eb847eff3c9da8f9d01fc"
   }
 ]
