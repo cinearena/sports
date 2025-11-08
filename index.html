@@ -7,16 +7,24 @@
    <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background:  #1f1f1f !important;
-      margin: 0;
-      color: white;
-      padding-top: 60px !important;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+    html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #1f1f1f !important;
+  color: white;
+  margin: 0;
+  padding-top: 60px !important;
+}
+
+main {
+  flex: 1; /* ✅ pushes footer down */
+  display: block;
+}
+
     /* Pretty Section Heading */
    .section-title {
   text-align: center;
@@ -113,7 +121,7 @@
   filter: invert(0); /* keep original color */
 }
 
-body > footer {
+footer {
   margin-top: auto;
 }
     
@@ -152,12 +160,13 @@ body > footer {
   </nav>
 </div>    
 
+<main>
 <center>
 <h1 class="section-title"><span class="icon">📺</span> Sport Channels</h1>
   </center>
 <div class="grid" id="channelGrid"></div>
-
-    
+ </main>
+  
  <!--- For Mennu -->   
 <script>
   const sidebar = document.getElementById("sidebar");
